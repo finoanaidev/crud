@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<h1 class="text-center">Liste des articles</h1>
+<div style="float:right;padding:12px 30px 14px"> <a class="btn btn-dark" href="/logout">logout</a></div>
+<div class="container">
+
+<a class="btn btn-success" href="/form">Ajouter article</a>
+<br>
+<table class="table">
+    <tr>
+        <td>id</td>
+        <td>title</td>
+        <td>content</td>
+        <td>articleDate</td>
+    </tr>
+    <% books.forEach(function(item) {%>
+    <tr>
+        <td><%= item.id %></td>
+        <td><%= item.title %></td>
+        <td><%= item.content %></td>
+        <td><%= item.articleDate%></td>
+        <td>
+            <a class="btn btn-warning" href="/edit?id=<%= item.id %>">Modifier</a>
+            <a class="btn btn-info" href="/delete?id=<%= item.id %>" onclick="return confirm('Voulez-vous vraiment supprimer?')">Supprimer</a>
+        </td>
+    </tr>
+    <% }); %>
+</table>
+
+</div>

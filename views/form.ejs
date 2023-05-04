@@ -1,0 +1,13 @@
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<form method="post">
+    <div class="container">
+    <div class="col-sm-4 mb-3" style="background-color:lavender;"> Title: <input name="title" value="<%= liste.title %>"></div>
+    <div class="col-sm-8 mb-3" style="background-color:lavenderblush;"> Content: <input name="content" value="<%= liste.content %>"></div>
+    <div class="col-sm-12 mb-3" style="background-color:lavenderblush;"> ArticleDate: <input name="articleDate" value="<%= liste.articleDate %>"></div>
+    <button class="btn btn-danger">save</button>
+    <input type="hidden" value="<%= liste.id %>" />
+   </div>
+</form>
